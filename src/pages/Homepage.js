@@ -11,7 +11,7 @@ const Homepage = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
-  if (error) {
+  if (error.length > 0 || data.error) {
     return <p>Error :(</p>;
   }
 
@@ -24,7 +24,7 @@ const Homepage = () => {
 
           <small>console list</small>
 
-          <p>{review.attributes.body}</p>
+          <p>{review.attributes.body.substring(0, 200)}...</p>
           <Link to={`/details/${review.id}`}>Read more</Link>
         </div>
       ))}

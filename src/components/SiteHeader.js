@@ -4,7 +4,7 @@ const SiteHeader = () => {
   return (
     <div className='site-header'>
       <Link to='/'>
-        <h1>Ninja Reviews</h1>
+        <h1>Game Reviews</h1>
       </Link>
     </div>
   );
